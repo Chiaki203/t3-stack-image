@@ -8,3 +8,5 @@ export function cn(...inputs: ClassValue[]) {
 export const postPerPage = 2
 export const userPostPerPage = 2
 export const commentPerPage = 2
+
+export const MAX_COUNT = 5

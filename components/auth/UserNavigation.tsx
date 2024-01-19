@@ -30,22 +30,22 @@ const UserNavigation = ({ user }: UserNavigationProps) => {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-white p-2 w-[300px]" align="end">
-        <Link href={`/author/${user.id}`}>
-          <DropdownMenuItem className="cursor-pointer">
-            <div className="break-words min-w-0">
-              <div className="mb-2">{user.name || ''}</div>
-              <div className="text-gray-500">{user.email || ''}</div>
-            </div>
-          </DropdownMenuItem>
-        </Link>
+        {/* <Link href={`/author/${user.id}`}>
+          <DropdownMenuItem className="cursor-pointer"> */}
+        <div className="break-words min-w-0">
+          <div className="mb-2">{user.name || ''}</div>
+          <div className="text-gray-500">{user.email || ''}</div>
+        </div>
+        {/* </DropdownMenuItem>
+        </Link> */}
         <DropdownMenuSeparator />
-        {user.isAdmin && (
+        {/* {user.isAdmin && (
           <Link href="/post/new">
             <DropdownMenuItem className="cursor-pointer">
               Create New Post
             </DropdownMenuItem>
           </Link>
-        )}
+        )} */}
         <Link href="/settings/profile">
           <DropdownMenuItem className="cursor-pointer">
             Account Setting

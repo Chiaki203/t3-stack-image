@@ -14,7 +14,7 @@ export const getSubscription = async({userId}:{userId:string|undefined}) => {
     const subscription = await prisma.subscription.findUnique({
       where: {userId}
     })
-    console.log('getSubscription subscription', subscription)
+    // console.log('getSubscription subscription', subscription)
     if (!subscription) {
       return {
         subscription: null,

@@ -25,15 +25,16 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex min-h-screen flex-col">
-          <AuthProvider>
-            <TrpcProvider>
-              <Navigation user={user} isSubscribed={isSubscribed} />
-              <ToastProvider />
-              <main className="container mx-auto max-w-screen-md flex-1 px-2">
-                {children}
-              </main>
-              <footer className="py-5 mt-20">
+        {/* <div className="flex min-h-screen flex-col"> */}
+        <AuthProvider>
+          <TrpcProvider>
+            {/* <Navigation user={user} isSubscribed={isSubscribed} /> */}
+            <ToastProvider />
+            {/* <ModalProvider /> */}
+            {/* <main className="container mx-auto max-w-screen-md flex-1 px-2"> */}
+            {children}
+            {/* </main> */}
+            {/* <footer className="py-5 mt-20">
                 <div className="text-center text-sm">
                   <a
                     href="https://github.com/Chiaki203"
@@ -44,10 +45,10 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
                     © Chiaki203
                   </a>
                 </div>
-              </footer>
-            </TrpcProvider>
-          </AuthProvider>
-        </div>
+              </footer> */}
+          </TrpcProvider>
+        </AuthProvider>
+        {/* </div> */}
       </body>
     </html>
   )
